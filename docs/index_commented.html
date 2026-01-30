@@ -1,7 +1,5 @@
-<!-- Archivo: html/index.html
-     Versión del archivo `index.html` con comentarios en cada línea explicando su función
-     y cómo aplicar el código en tu sitio. Mantén las explicaciones afuera del runtime
-     (son comentarios HTML) para no afectar la ejecución.
+<!-- Archivo: docs/index_commented.html
+     Contiene `index.html` con comentarios en cada línea explicando su función y cómo se aplica.
 -->
 <!DOCTYPE html>
 <!-- Define el tipo de documento HTML5 para que el navegador renderice correctamente -->
@@ -19,9 +17,6 @@
     <!-- Enlaza la hoja de estilos principal; sirve para separar estructura de presentación -->
 </head>
 <body>
-    <!-- Nota: el fondo de página (imagen + overlay) se aplica desde css/styles.css
-         usando `background-image: linear-gradient(...), url(...)` para añadir el overlay.
-         Esto mantiene el HTML limpio y permite ajustar el overlay desde CSS. -->
     <!-- NAV BAR INTERACTIVO -->
     <!-- Contenedor de navegación principal; sirve para moverse entre páginas del sitio -->
     <nav class="navbar">
@@ -71,67 +66,6 @@
                 <p class="hero-description">Sistema de Becas Socioeconómicas 2026</p>
                 <!-- Descripción adicional que apoya al título principal -->
             </section>
-
-                        <!-- ==========================================================
-                                 BLOQUE: Imagen de estudiantes (Fondo) - EXPLICACIÓN DETALLADA
-
-                                 Qué hace este bloque:
-                                 - Muestra una 'tarjeta' visual con una foto de estudiantes usada
-                                     como imagen de fondo (`background-image`) para que la imagen
-                                     cubra y recorte automáticamente el área (útil en banners).
-                                 - Añade una capa `.image-overlay` semitransparente para asegurar
-                                     legibilidad del texto situado encima de la foto.
-                                 - Añade un contenedor `.image-caption` con título y descripción
-                                     sobre la foto.
-
-                                 Por qué lo hacemos así (razón técnica y de diseño):
-                                 - `background-image` + `background-size: cover` permite que la
-                                     imagen ocupe todo el contenedor y se recorte centrada sin
-                                     deformarse. Esto evita deformaciones en distintos tamaños
-                                     de pantalla.
-                                 - El overlay mejora contraste entre texto y foto para accesibilidad.
-                                 - El hover se implementa en CSS (no JS) para transiciones más
-                                     rápidas y menos dependencias.
-
-                                 Accesibilidad y SEO:
-                                 - Las imágenes de fondo no llevan `alt`. Si la imagen es
-                                     relevante para el contenido (necesitas que los lectores de
-                                     pantalla la describan), usa un `<img alt="...">` o añade
-                                     una descripción textual visible/oculta.
-                                 - Esta sección tiene `aria-label` que da contexto a lectores de
-                                     pantalla sobre el propósito del bloque.
-
-                                 Cómo modificarlo (parámetros comunes):
-                                 - Ruta de la imagen: cambia la URL en `background-image: url(...)`.
-                                 - Nivel de overlay: modifica la opacidad en `.image-overlay`.
-                                 - Zoom al pasar el cursor: ajusta `transform: scale(1.03)` en CSS.
-                                 - Altura: cambia `height` en `.image-bg` para adaptar al diseño.
-
-                                 Pruebas locales rápidas:
-                                 1) Coloca la imagen en `assets/images/estudiantes.jpg` (ruta relativa usada aquí).
-                                 2) Sirve el sitio (`python -m http.server 8000`) desde la raíz del proyecto
-                                        y abre `http://localhost:8000/html/index.html`.
-                                 3) Verifica hover en escritorio y el comportamiento responsive
-                                        en la vista de dispositivo de DevTools.
-
-                                 Nota final: si quieres soporte total de accesibilidad y SEO,
-                                 puedo convertir esta tarjeta a:
-                                     <figure><img src="..." alt="..."><figcaption>...</figcaption></figure>
-                                 que permite `alt`, `srcset` y `loading="lazy"`.
-                                 ========================================================== -->
-                        <!-- Usando imagen local desde la carpeta `img/` -->
-                        <section class="image-card" aria-label="Estudiantes en área común con naturaleza">
-                            <!-- contenedor que usa background-image: mejor para banners y recortes -->
-                            <div class="image-bg" style="background-image: url('../img/depositphotos_35653293-Happiness-youth-group.jpg');">
-                                        <!-- Overlay semitransparente para mejorar contraste del texto -->
-                                        <div class="image-overlay" aria-hidden="true"></div>
-                                        <!-- Leyenda sobre la imagen: visible y legible gracias al overlay -->
-                                        <div class="image-caption">
-                                                <h3>Espacio de estudio y convivencia</h3>
-                                                <p>Estudiantes compartiendo en un área común rodeada de naturaleza.</p>
-                                        </div>
-                                </div>
-                        </section>
 
             <section class="content-section">
                 <!-- Sección informativa: ¿qué son las becas? -->
