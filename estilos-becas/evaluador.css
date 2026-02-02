@@ -1,0 +1,97 @@
+/* Configuración general de la página */
+body {
+  background: linear-gradient(135deg, #000428 0%, #004e92 100%); /* Degradado "Midnight Blue" */
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #f0f8ff; /* Color de texto principal (AliceBlue) para una buena legibilidad sobre fondo oscuro */
+}
+
+/* Estilos del encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: rgba(0, 0, 0, 0.25); /* Fondo semitransparente */
+  border-bottom: 1px solid #004e92;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para el botón de cerrar sesión */
+#cerrarsesión {
+  padding: 12px 24px;
+  background-color: #4b5563;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#cerrarsesión:hover {
+  background-color: #374151;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenido principal */
+main {
+  padding: 40px 50px;
+}
+
+/* Contenedor para las secciones principales (solicitantes y criterios) */
+main > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Layout responsivo */
+  gap: 40px;
+}
+
+/* Estilo de las "tarjetas" o secciones internas */
+main > div > div {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 25px;
+  margin-top: 50px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-top: 1px solid #004e92;
+  color: #bdc3c7; /* Color de texto más suave para el footer */
+  font-size: 0.9rem;
+}
+
+/* Media query para mejorar la visualización en pantallas pequeñas */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  main > div {
+    grid-template-columns: 1fr; /* Apila las secciones en móviles */
+    gap: 20px;
+  }
+}
