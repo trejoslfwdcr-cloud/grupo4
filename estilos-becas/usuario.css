@@ -1,0 +1,98 @@
+body {
+  background: linear-gradient(135deg, #000428 0%, #004e92 100%);
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Estilos para el contenedor del formulario en usuario.html */
+.form-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+}
+
+/* Título del formulario (opcional) */
+.form-container h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #1f2937;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Estilos para las etiquetas (labels) */
+.form-group {
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+/* Estilos para inputs de texto, email, password, etc. */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #1f2937;
+  box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
+  transition: all 0.3s ease;
+}
+
+/* Estado de foco para los inputs */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: #6b7280;
+  box-shadow: 0 0 0 4px rgba(107, 114, 128, 0.15);
+}
+
+/* Estilos para el botón de envío */
+button[type="submit"],
+.btn-guardar {
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #4b5563;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(75, 85, 99, 0.25);
+}
+
+button[type="submit"]:hover,
+.btn-guardar:hover {
+  background-color: #374151;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px -1px rgba(75, 85, 99, 0.35);
+}
+
+/* Pequeño ajuste para pantallas móviles */
+@media (max-width: 600px) {
+  .form-container {
+    margin: 20px;
+    padding: 20px;
+  }
+}

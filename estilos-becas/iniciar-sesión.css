@@ -1,0 +1,115 @@
+/* Configuración general con fondo azul eléctrico vibrante */
+body {
+  background: linear-gradient(135deg, #000428 0%, #004e92 100%); /* Degradado "Midnight Blue" */
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centra todo vertical y horizontalmente */
+}
+
+/* Título con animación de rebote y color blanco para resaltar */
+h1 {
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: bounceInDown 1s ease-out forwards; /* Animación de entrada llamativa */
+}
+
+/* Tarjeta del formulario: Blanco puro con sombra profunda */
+.form-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 20px; /* Bordes muy redondeados */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); /* Sombra flotante intensa */
+  width: 100%;
+  max-width: 380px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.4s forwards; /* Aparece subiendo suavemente */
+}
+
+/* Espaciado de los campos */
+.form-group {
+  margin-bottom: 25px;
+}
+
+/* Etiquetas (Labels) */
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #0056b3; /* Azul oscuro para contraste */
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Inputs estilizados */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #f8fbff; /* Fondo azul muy tenue */
+  box-sizing: border-box;
+}
+
+/* Efecto "Zoom" y brillo al seleccionar un input */
+input:focus {
+  outline: none;
+  border-color: #00c6ff;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.3);
+  transform: scale(1.02); /* Crece ligeramente */
+}
+
+/* Botón con degradado llamativo */
+button[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to right, #00c6ff, #0072ff); /* Degradado horizontal */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Botón tipo píldora */
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-3px); /* Se eleva al pasar el mouse */
+  box-shadow: 0 10px 25px rgba(0, 114, 255, 0.5); /* Resplandor azul */
+}
+
+/* Animación de rebote para el título */
+@keyframes bounceInDown {
+  0% { opacity: 0; transform: translateY(-50px); }
+  60% { opacity: 1; transform: translateY(15px); }
+  80% { transform: translateY(-5px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Animación de subida para el formulario */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ajuste para móviles */
+@media (max-width: 480px) {
+  .form-container {
+    margin: 20px;
+    padding: 30px;
+  }
+}

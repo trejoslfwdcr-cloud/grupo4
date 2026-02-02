@@ -3,19 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Incie sesión</title>
-    <link rel="stylesheet" href="">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="../estilos-becas/iniciar-sesión.css">
 </head>
 <body>
-    <h1>Inicio de sesión</h1>//título
-    //formulario de incio de sesión
-    <form action="">
-        <label for="">Usuario</label>
-        <input id="usario" type="text" placeholder="Digite su usario">
-        <label for="">Contraseña</label>
-        <input id="contraseña" type="text" placeholder="Digite su contraseña">
-        <button>Iniciar sesión</button>//botón
-    </form>
+    <!-- SECCIÓN: Título Principal -->
+    <h1 style="text-align: center;">Inicio de sesión</h1>
+
+    <!-- SECCIÓN: Contenedor del Formulario -->
+    <!-- Este contenedor agrupa el formulario para centrarlo y darle estilo de tarjeta -->
+    <div class="form-container">
+        <form action="">
+            <!-- ÁREA: Campo de Usuario -->
+            <div class="form-group">
+                <label for="usuario">Usuario</label>
+                <input id="usuario" type="text" placeholder="Digite su usuario">
+            </div>
+
+            <!-- ÁREA: Campo de Contraseña -->
+            <div class="form-group">
+                <label for="contraseña">Contraseña</label>
+                <!-- Se usa type="password" para ocultar los caracteres por seguridad -->
+                <input id="contraseña" type="password" placeholder="Digite su contraseña">
+            </div>
+
+            <!-- ÁREA: Botón de Acción -->
+            <button type="submit">Iniciar sesión</button>
+        </form>
+    </div>
 
     <script src=""></script>
 </body>

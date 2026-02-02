@@ -4,32 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuario</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../estilos-becas/usuario.css">
 </head>
-<body>
-    <h1>Solicite su beca</h1>
-    //Formulario para solicitar becas
-    <form action="">
-        <h4>Formulario para becas</h4>
-        <p>Datos Personales</p>
-        <label for="">Nombre completo</label>
-        <input id="nombreCompleto" type="text" placeholder="Nombre Completo">
-        <label for="">Nivel educativo</label>
-        <input id="educación" type="text" placeholder="Nivel educativo">
-        <label for="">Situación socioeconómica</label>
-        <input id="personasHogar" type="text" placeholder="Personas que viven con usted">
-        <input id="ingresos" type="text" placeholder="Cantidad de ingresos totales del hogar">
-        <label for="">Tipo de ayuda</label>
-        <select name="" id="seleccione">
-            <option value="">Seleccione la ayuda deseada</option>
-        </select>
-        <button>Enviar solicitud</button>
-    </form>
-        //sección dónde se ven las solicitudes realizadas por el usuario
-        <h4>Solicitudes realizadas</h4>//título
-        <div>//div dónde se escribiría los datos
-            <p></p>
+<body >
+    <!-- SECCIÓN: Título Principal de la Página -->
+    <h1 style="text-align: center; color: #ffffff;">Solicite su beca</h1>
+    
+    <!-- SECCIÓN: Contenedor del Formulario (Tarjeta Blanca) -->
+    <!-- Este div agrupa todo el formulario y le da el estilo de tarjeta centrada -->
+    <div class="form-container">
+        <h2>Formulario para becas</h2>
+        
+        <!-- Subtítulo o instrucción visual -->
+        <p style="margin-bottom: 15px; color: #666;">Datos Personales</p>
+        
+        <!-- INICIO DEL FORMULARIO -->
+        <form action="">
+            
+            <!-- Campo: Nombre Completo -->
+            <div class="form-group">
+                <label for="nombreCompleto">Nombre completo</label>
+                <input id="nombreCompleto" type="text" placeholder="Nombre Completo">
+            </div>
+
+            <!-- Campo: Nivel Educativo -->
+            <div class="form-group">
+                <label for="educación">Nivel educativo</label>
+                <input id="educación" type="text" placeholder="Nivel educativo">
+            </div>
+
+            <!-- Campo: Personas en el hogar (Separado para mejor orden) -->
+            <div class="form-group">
+                <label for="personasHogar">Personas en el hogar</label>
+                <input id="personasHogar" type="number" placeholder="Personas que viven con usted">
+            </div>
+
+            <!-- Campo: Ingresos (Separado para tener su propio label) -->
+            <div class="form-group">
+                <label for="ingresos">Ingresos mensuales</label>
+                <input id="ingresos" type="number" placeholder="Cantidad de ingresos totales del hogar">
+            </div>
+
+            <!-- Campo: Selección de tipo de ayuda -->
+            <div class="form-group">
+                <label for="seleccione">Tipo de ayuda</label>
+                <select name="" id="seleccione">
+                    <option value="">Seleccione la ayuda deseada</option>
+                    <option value="transporte">Beca de Transporte</option>
+                    <option value="alimentacion">Beca de Alimentación</option>
+                </select>
+            </div>
+
+            <!-- Botón de acción para enviar -->
+            <button type="submit" class="btn-guardar">Enviar solicitud</button>
+        </form>
+    </div>
+
+    <!-- SECCIÓN: Historial (Fuera de la tarjeta principal) -->
+    <!-- Muestra las solicitudes previas del usuario -->
+    <div class="form-container" style="margin-top: 30px;">
+        <h2>Solicitudes realizadas</h2>
+        <div>
+            <p>No hay solicitudes recientes.</p>
         </div>
+    </div>
 
     <script src=""></script>
 </body>
