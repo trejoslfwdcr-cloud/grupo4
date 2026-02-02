@@ -1,0 +1,249 @@
+/* Define variables CSS globales (tema de colores) */
+:root {
+	/* Color de fondo principal de la página */
+	--bg: #f6f8fa;
+	/* Color de fondo para las tarjetas y paneles */
+	--card: #fff;
+	/* Color acentuado usado en botones y elementos destacados */
+	--accent: #2b6cb0;
+	/* Color gris para texto secundario */
+	--muted: #666;
+}
+
+/* Estilos aplicados a TODOS los elementos */
+* {
+	/* Establece el modelo de caja incluir padding y border en el ancho total */
+	box-sizing: border-box;
+	/* Define la familia de fuentes por defecto para toda la página */
+	font-family: Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Estilos para el elemento html y body */
+html, body {
+	/* Establece la altura al 100% de la ventana */
+	height: 100%;
+	/* Elimina los márgenes por defecto */
+	margin: 0;
+	/* Aplica el color de fondo definido en variables */
+	background: var(--bg);
+	/* Color del texto principal */
+	color: #222;
+}
+
+/* Estilos para el encabezado de la página */
+header {
+	/* Aplica un gradiente lineal de azul oscuro a azul más claro */
+	background: linear-gradient(90deg, #1e3a8a, #2b6cb0);
+	/* Color del texto en blanco */
+	color: #fff;
+	/* Espaciado interno: 14px arriba/abajo, 20px izquierda/derecha */
+	padding: 14px 20px;
+	/* Usa flexbox para alinear elementos horizontalmente */
+	display: flex;
+	/* Alinea los elementos verticalmente al centro */
+	align-items: center;
+	/* Distribuye el espacio entre elementos (logo a un lado, nav al otro) */
+	justify-content: space-between;
+}
+
+/* Estilos para el título h1 dentro del header */
+header h1 {
+	/* Elimina el margen por defecto del h1 */
+	margin: 0;
+	/* Reduce el tamaño de la fuente */
+	font-size: 18px;
+}
+
+/* Estilos para la barra de navegación del usuario */
+nav#nav-user {
+	/* Tamaño de fuente más pequeño */
+	font-size: 14px;
+}
+
+/* Estilos para los paneles principales (secciones de contenido) */
+.panel {
+	/* Ancho máximo del contenido para mejor legibilidad */
+	max-width: 1000px;
+	/* Margen automático horizontalmente para centrar, 20px arriba/abajo */
+	margin: 20px auto;
+	/* Espaciado interno */
+	padding: 16px;
+	/* Fondo blanco del panel */
+	background: var(--card);
+	/* Bordes redondeados */
+	border-radius: 8px;
+	/* Sombra sutil para efecto de profundidad */
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .08);
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+	/* Oculta el elemento completamente */
+	display: none;
+}
+
+/* Contenedor de los formularios de auth (login y registro lado a lado) */
+.auth-forms {
+	/* Usa flexbox para mostrar formularios en línea */
+	display: flex;
+	/* Espacio entre los dos formularios */
+	gap: 24px;
+}
+
+/* Estilos globales para todos los formularios */
+form {
+	/* Usa flexbox para organizar elementos verticalmente */
+	display: flex;
+	/* Dirección vertical */
+	flex-direction: column;
+	/* Espacio entre campos */
+	gap: 8px;
+}
+
+/* Estilos para campos de entrada, áreas de texto, selectores y botones */
+input, textarea, select, button {
+	/* Espaciado interno */
+	padding: 8px;
+	/* Borde gris claro */
+	border: 1px solid #d1d5db;
+	/* Bordes ligeramente redondeados */
+	border-radius: 6px;
+}
+
+/* Estilos específicos para botones */
+button {
+	/* Fondo con color acentuado */
+	background: var(--accent);
+	/* Texto en color blanco */
+	color: #fff;
+	/* Elimina el borde por defecto */
+	border: none;
+	/* Cambiar cursor a manita cuando pasar sobre botones */
+	cursor: pointer;
+}
+
+/* Estilos para listas (ul) */
+ul {
+	/* Elimina viñetas de lista */
+	list-style: none;
+	/* Elimina espaciado interno */
+	padding: 0;
+	/* Elimina espaciado externo */
+	margin: 0;
+}
+
+/* Estilos para elementos de lista (li) */
+li {
+	/* Espaciado interno */
+	padding: 10px;
+	/* Borde inferior para separar items */
+	border-bottom: 1px solid #eee;
+	/* Usa flexbox */
+	display: flex;
+	/* Organiza el contenido verticalmente */
+	flex-direction: column;
+}
+
+/* Estilos para metadatos y acciones en convocatorias y postulaciones */
+.meta, .app-meta, .conv-actions, .app-actions {
+	/* Tamaño de fuente más pequeño */
+	font-size: 13px;
+	/* Color gris para elementos secundarios */
+	color: var(--muted);
+	/* Espacio arriba del elemento */
+	margin-top: 6px;
+}
+
+/* Estilos para botones dentro de acciones */
+.conv-actions button, .app-actions button {
+	/* Margen a la derecha entre botones */
+	margin-right: 6px;
+}
+
+/* Estilos para el modal (diálogo emergente) */
+#modal {
+	/* Posicionamiento fijo que cubre toda la pantalla */
+	position: fixed;
+	/* inset: 0 cubre los 4 lados (top, right, bottom, left) */
+	inset: 0;
+	/* Fondo oscuro semi-transparente */
+	background: rgba(0, 0, 0, .4);
+	/* Usa flexbox para centrar contenido */
+	display: flex;
+	/* Centra verticalmente */
+	align-items: center;
+	/* Centra horizontalmente */
+	justify-content: center;
+}
+
+/* Estilos para la caja del modal */
+#modal .box {
+	/* Fondo blanco */
+	background: #fff;
+	/* Espaciado interno */
+	padding: 16px;
+	/* Bordes redondeados */
+	border-radius: 8px;
+	/* Ancho máximo */
+	max-width: 720px;
+	/* Ancho relativo para ser responsive */
+	width: 100%;
+}
+
+/* Estilos para los paneles de roles (admin, postulante, evaluador) */
+.role-panel {
+	/* Margen superior para separar del contenido anterior */
+	margin-top: 12px;
+}
+
+/* Estilos para las insignias de estado */
+.badge {
+	/* Muestra como elemento en línea con dimensiones */
+	display: inline-block;
+	/* Espaciado interno */
+	padding: 4px 8px;
+	/* Bordes muy redondeados (casi una píldora) */
+	border-radius: 999px;
+	/* Fondo gris claro */
+	background: #f1f5f9;
+	/* Texto color azul oscuro */
+	color: #0f172a;
+	/* Texto en negrita */
+	font-weight: 600;
+	/* Tamaño de fuente pequeño */
+	font-size: 12px;
+}
+
+/* Estilos para estado APROBADA (verde) */
+.state-Aprobada {
+	/* Color verde */
+	color: green;
+	/* Texto en negrita */
+	font-weight: 700;
+}
+
+/* Estilos para estado RECHAZADA (rojo) */
+.state-Rechazada {
+	/* Color rojo */
+	color: red;
+	/* Texto en negrita */
+	font-weight: 700;
+}
+
+/* Estilos para estado EN REVISIÓN (naranja) */
+.state-En\ revisión {
+	/* Color naranja/amarillo */
+	color: orange;
+	/* Texto en negrita */
+	font-weight: 700;
+}
+
+/* Media query para dispositivos con ancho máximo de 720px (tablets y móviles) */
+@media (max-width: 720px) {
+	/* En pantallas pequeñas, los formularios de auth se muestran verticalmente */
+	.auth-forms {
+		/* Cambia la dirección a vertical */
+		flex-direction: column;
+	}
+}
+
