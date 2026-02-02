@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administración</title>
+    <!-- Enlace a la hoja de estilo CSS -->
+    <link rel="stylesheet" href="../estilos-becas/administrador.css">
 </head>
 <body>
     <header>
@@ -11,6 +13,7 @@
         <h1>Administración</h1>
         <!--botón de cerrar sesión-->
         <nav>
+            <!-- Botón para cerrar sesión -->
             <button id="cerrarsesión">Cerrar sesión</button>
         </nav>
     </header>
@@ -19,6 +22,7 @@
     <main>
         <!--div para agregar criterios-->
         <div id="criterios">
+            <!-- Título de la sección de criterios -->
             <h4>Criterios de evaluación</h4>
             <div id="campoCriterios"> <!--los criterios deben aparecer aquí-->
             
@@ -26,6 +30,7 @@
             
             <!--divs dónde se agregan los criterios-->
             <div>
+                <!-- Input para nuevos criterios y botón para añadir -->
                 <input id="nuevosCriterios" type="text" placeholder="Digite nuevos criterios">
                 <button id="añadirCriterios">Añadir</button>
             </div>
@@ -33,6 +38,7 @@
 
         <!--div para determinar los tipos de becas-->
         <div id="becas">
+            <!-- Título de la sección de becas -->
             <h4>Becas</h4>
             <div id="campoBecas"> <!--aquí deben de aparecer-->
                 
@@ -41,12 +47,14 @@
             <!--div para la sección de añadir nuevos "tipos" de becas-->
             <div>
                 <input id="becas" type="text" placeholder="Nueva beca">
+                <!-- Input para añadir nuevos tipos de becas -->
             </div>
         </div>
         
         <!--div para asignar a los evaluadores-->
         <div id="evaluadores">
             <h4>Evaluadores</h4>
+             <!-- Título de la sección de evaluadores -->
             <div id="campoEvaluadores"> <!--aquí deben aparecer-->
                 
             </div>
@@ -54,6 +62,7 @@
             <div> <!--aquí se ingresan los datos para agregar a los evaluadores-->
                 <label for="">Agregue nuevo evaluador</label>
                 <input id="usuarioEvaluador" type="text" placeholder="Digite el usuario del evaluador">
+                 <!-- Inputs para agregar nuevos evaluadores -->
                 <input id="contraseñaEvaluador" type="text" placeholder="Digite la contraseña del evaluador">
                 <button id="registrarEvaluador">Registrar Evaluador</button>
             </div>

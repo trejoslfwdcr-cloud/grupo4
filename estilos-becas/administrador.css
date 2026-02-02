@@ -1,0 +1,108 @@
+/* Configuración general de la página */
+body {
+  background: linear-gradient(135deg, #000428 0%, #004e92 100%); /* Degradado "Midnight Blue" */
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #f0f8ff; /* Texto claro para contraste */
+}
+
+/* Estilos del encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: rgba(0, 0, 0, 0.3); /* Fondo oscuro semitransparente */
+  border-bottom: 1px solid #004e92;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Botón de cerrar sesión */
+#cerrarsesión, .btn-logout {
+  padding: 10px 20px;
+  background-color: #4b5563;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#cerrarsesión:hover, .btn-logout:hover {
+  background-color: #374151;
+  transform: translateY(-2px);
+}
+
+/* Contenido principal */
+main {
+  padding: 40px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Contenedor de paneles/tarjetas */
+.admin-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+/* Estilo de las tarjetas de administración */
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #60a5fa; /* Azul claro para destacar títulos */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para formularios dentro del admin (ej. crear criterios) */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+  main { padding: 20px; }
+}
