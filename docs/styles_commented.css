@@ -1,8 +1,6 @@
-/* Archivo: css/styles.css
-   Versión anotada: cada regla incluye un comentario que explica su propósito
-   y cómo aplicarla en tu proyecto. Los comentarios CSS no afectan el runtime.
+/* Archivo: docs/styles_commented.css
+   Contiene `styles.css` con comentarios por línea que explican cada regla y su propósito.
 */
-
 /* ==================== ESTILOS GENERALES ==================== */
 * {
     /* Resetea márgenes y padding globalmente para consistencia */
@@ -18,28 +16,10 @@ html {
 
 body {
     /* Define tipografía y colores base del sitio */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* familia principal */
-    line-height: 1.6; /* altura de línea para legibilidad */
-    color: #333; /* color de texto por defecto */
-
-    /*
-      Fondo de página con overlay:
-      - Usamos dos capas en `background-image`: primero un `linear-gradient`
-        semitransparente que actúa como overlay (oscurece la imagen), y
-        después la url de la imagen. El gradiente se pinta encima de la imagen
-        permitiendo mantener buena legibilidad del contenido.
-    */
-    background-image: linear-gradient(rgba(0,0,0,0.32), rgba(0,0,0,0.32)), url('../img/depositphotos_35653293-Happiness-youth-group.jpg');
-    /* Explicación: el primer valor es el overlay (gradiente uniforme), el
-       segundo valor es la imagen real usada como fondo. */
-
-    background-size: cover; /* hace que la imagen cubra todo el viewport sin deformarse */
-    background-position: center center; /* centra la imagen en el contenedor */
-    background-repeat: no-repeat; /* evita repeticiones si la imagen es pequeña */
-    background-attachment: fixed; /* mantiene la imagen fija al hacer scroll (parallax ligero) */
-
-    /* Color de respaldo en caso de fallo de carga de la imagen */
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Color de fondo claro para contraste */
 }
 
 /* ==================== NAVBAR ==================== */
@@ -421,98 +401,3 @@ main.main-content {
         font-size: 1rem;
     }
 }
-
-/* ==================== IMAGE CARD (Estudiantes) ==================== */
-/* Muestra una imagen de fondo con overlay y efectos hover (shadow / fade) */
-.image-card {
-    margin: 2rem 0;
-}
-.image-bg {
-    position: relative;
-    width: 100%;
-    height: 260px; /* Altura recomendada; ajusta según diseño */
-    background-size: cover; /* Cubre todo el contenedor */
-    background-position: center center; /* Centrado en la imagen */
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    transition: transform 0.5s ease, box-shadow 0.4s ease, filter 0.5s ease, opacity 0.4s ease;
-}
-.image-bg .image-overlay {
-    position: absolute;
-    inset: 0; /* top:0; right:0; bottom:0; left:0 */
-    background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.45));
-    transition: background 0.4s ease, opacity 0.4s ease;
-}
-.image-caption {
-    position: absolute;
-    left: 1.5rem;
-    bottom: 1.5rem;
-    z-index: 2;
-    color: #fff;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-}
-.image-caption h3 {
-    margin-bottom: 0.25rem;
-    font-size: 1.25rem;
-}
-.image-caption p {
-    margin: 0;
-    font-size: 0.95rem;
-    opacity: 0.95;
-}
-.image-bg:hover {
-    transform: scale(1.03); /* Ligera ampliación */
-    box-shadow: 0 18px 40px rgba(0,0,0,0.25); /* Sombra más pronunciada */
-    filter: brightness(1.05); /* Efecto de 'highlight' */
-}
-.image-bg:hover .image-overlay {
-    background: rgba(0,0,0,0.15); /* Aclarar overlay para efecto fade */
-}
-
-@media (max-width: 768px) {
-    .image-bg { height: 200px; }
-}
-
-@media (max-width: 480px) {
-    .image-bg { height: 160px; }
-    .image-caption { left: 1rem; bottom: 1rem; }
-}
-
-/* ===============================================================
-     EXPLICACIÓN DETALLADA (REGLAS CSS - IMAGE CARD)
-
-     - `.image-card`:
-             contenedor que separa la tarjeta del resto del contenido.
-
-     - `.image-bg`:
-             usa `background-image` en HTML para establecer la foto. Reglas clave:
-                 * `background-size: cover` hace que la imagen cubra todo el contenedor
-                     y se recorte centrada para mantener aspecto.
-                 * `overflow: hidden` y `border-radius` aseguran bordes limpios.
-                 * `transition` permite animaciones suaves en hover.
-
-     - `.image-overlay` (definida previamente):
-             capa semitransparente encima de la foto para aumentar contraste con texto.
-             Ajusta su `background` para cambiar la oscuridad (p.ej. rgba(0,0,0,0.45)).
-
-     - `.image-caption`:
-             texto sobre la imagen; se posiciona en la esquina inferior izquierda.
-             `text-shadow` ayuda a la legibilidad sobre fondos variables.
-
-     Hover / animación:
-         - `.image-bg:hover` realiza `transform: scale(1.03)` para un leve zoom,
-             `box-shadow` se amplía y `filter: brightness(1.05)` da un efecto de 'highlight'.
-         - Para ajustar la intensidad del efecto cambia `scale(1.03)` o valores de
-             `box-shadow` y `filter`.
-
-     Responsive:
-         - Alturas reducidas en `@media` para que la tarjeta se adapte en móviles.
-
-     Recomendaciones prácticas:
-         - Si necesitas que la imagen tenga `alt` para lectores de pantalla,
-             usa un `<img alt="...">` dentro de un `<figure>` en vez de `background-image`.
-         - Para lazy-loading y `srcset` (imágenes responsivas y performance) usar `<img>`.
-         - Para cambiar la imagen en varios puntos, evita inline `style` y usa clases
-             o `data-attributes` que alteren `background-image` desde CSS o JS.
-     =============================================================== */

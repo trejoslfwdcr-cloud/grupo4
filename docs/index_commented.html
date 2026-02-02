@@ -1,12 +1,56 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Becas Socieconomicas 2026</title>
-    <link rel="stylesheet" href="../estilos-becas/index.css" />
-  </head>
-  <h1>Bienvenido a IBACS</h1>
+<!-- Archivo: docs/index_commented.html
+     Contiene `index.html` con comentarios en cada línea explicando su función y cómo se aplica.
+-->
+<!DOCTYPE html>
+<!-- Define el tipo de documento HTML5 para que el navegador renderice correctamente -->
+<html lang="es">
+<!-- Elemento raíz del documento; `lang` ayuda en accesibilidad y SEO -->
+<head>
+    <!-- Metadatos y recursos del documento -->
+    <meta charset="UTF-8">
+    <!-- Indica la codificación de caracteres; evita problemas con acentos y caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que el sitio sea responsive en móviles ajustando el ancho del viewport -->
+    <title>Becas Socioeconómicas 2026 - IBACS</title>
+    <!-- Texto que aparece en la pestaña del navegador; importante para identificación -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Enlaza la hoja de estilos principal; sirve para separar estructura de presentación -->
+</head>
+<body>
+    <!-- NAV BAR INTERACTIVO -->
+    <!-- Contenedor de navegación principal; sirve para moverse entre páginas del sitio -->
+    <nav class="navbar">
+        <!-- `navbar` contiene logo, menú y botón hamburguesa para móvil -->
+        <div class="nav-container">
+            <!-- Caja que alinea los elementos del navbar dentro de un ancho máximo -->
+            <div class="nav-logo">
+                <!-- Logo o nombre de la institución; importante para identidad visual -->
+                <h1>IBACS</h1>
+            </div>
+            <ul class="nav-menu">
+                <!-- Lista de enlaces de navegación; semánticamente correcta para accesibilidad -->
+                <li class="nav-item"><a href="index.html" class="nav-link active">Inicio</a></li>
+                <!-- Enlace a la página principal; la clase `active` indica la página actual -->
+                <li class="nav-item"><a href="registro.html" class="nav-link">Registro</a></li>
+                <!-- Enlace a la página de registro; dirige al formulario de inscripción -->
+                <li class="nav-item"><a href="iniciodesesion.html" class="nav-link">Iniciar Sesión</a></li>
+                <!-- Enlace para autenticación de usuarios -->
+                <li class="nav-item"><a href="usuario.html" class="nav-link">Perfil</a></li>
+                <!-- Enlace al perfil del usuario; útil para ver estado de la solicitud -->
+                <li class="nav-item"><a href="evaluador.html" class="nav-link">Evaluador</a></li>
+                <!-- Enlace para evaluadores (roles administrativos) -->
+            </ul>
+            <div class="hamburger">
+                <!-- Botón hamburguesa visible en móvil; controla la visibilidad del menú -->
+                <span></span>
+                <!-- Línea 1 del icono hamburguesa; estilizada por CSS -->
+                <span></span>
+                <!-- Línea 2 del icono hamburguesa -->
+                <span></span>
+                <!-- Línea 3 del icono hamburguesa -->
+            </div>
+        </div>
+    </nav>
 
     <!-- CONTENIDO PRINCIPAL -->
     <div class="container">
@@ -22,67 +66,6 @@
                 <p class="hero-description">Sistema de Becas Socioeconómicas 2026</p>
                 <!-- Descripción adicional que apoya al título principal -->
             </section>
-
-                        <!-- ==========================================================
-                                 BLOQUE: Imagen de estudiantes (Fondo) - EXPLICACIÓN DETALLADA
-
-                                 Qué hace este bloque:
-                                 - Muestra una 'tarjeta' visual con una foto de estudiantes usada
-                                     como imagen de fondo (`background-image`) para que la imagen
-                                     cubra y recorte automáticamente el área (útil en banners).
-                                 - Añade una capa `.image-overlay` semitransparente para asegurar
-                                     legibilidad del texto situado encima de la foto.
-                                 - Añade un contenedor `.image-caption` con título y descripción
-                                     sobre la foto.
-
-                                 Por qué lo hacemos así (razón técnica y de diseño):
-                                 - `background-image` + `background-size: cover` permite que la
-                                     imagen ocupe todo el contenedor y se recorte centrada sin
-                                     deformarse. Esto evita deformaciones en distintos tamaños
-                                     de pantalla.
-                                 - El overlay mejora contraste entre texto y foto para accesibilidad.
-                                 - El hover se implementa en CSS (no JS) para transiciones más
-                                     rápidas y menos dependencias.
-
-                                 Accesibilidad y SEO:
-                                 - Las imágenes de fondo no llevan `alt`. Si la imagen es
-                                     relevante para el contenido (necesitas que los lectores de
-                                     pantalla la describan), usa un `<img alt="...">` o añade
-                                     una descripción textual visible/oculta.
-                                 - Esta sección tiene `aria-label` que da contexto a lectores de
-                                     pantalla sobre el propósito del bloque.
-
-                                 Cómo modificarlo (parámetros comunes):
-                                 - Ruta de la imagen: cambia la URL en `background-image: url(...)`.
-                                 - Nivel de overlay: modifica la opacidad en `.image-overlay`.
-                                 - Zoom al pasar el cursor: ajusta `transform: scale(1.03)` en CSS.
-                                 - Altura: cambia `height` en `.image-bg` para adaptar al diseño.
-
-                                 Pruebas locales rápidas:
-                                 1) Coloca la imagen en `assets/images/estudiantes.jpg` (ruta relativa usada aquí).
-                                 2) Sirve el sitio (`python -m http.server 8000`) desde la raíz del proyecto
-                                        y abre `http://localhost:8000/html/index.html`.
-                                 3) Verifica hover en escritorio y el comportamiento responsive
-                                        en la vista de dispositivo de DevTools.
-
-                                 Nota final: si quieres soporte total de accesibilidad y SEO,
-                                 puedo convertir esta tarjeta a:
-                                     <figure><img src="..." alt="..."><figcaption>...</figcaption></figure>
-                                 que permite `alt`, `srcset` y `loading="lazy"`.
-                                 ========================================================== -->
-                        <!-- Usando imagen local desde la carpeta `img/` -->
-                        <section class="image-card" aria-label="Estudiantes en área común con naturaleza">
-                            <!-- contenedor que usa background-image: mejor para banners y recortes -->
-                            <div class="image-bg" style="background-image: url('../img/depositphotos_35653293-Happiness-youth-group.jpg');">
-                                        <!-- Overlay semitransparente para mejorar contraste del texto -->
-                                        <div class="image-overlay" aria-hidden="true"></div>
-                                        <!-- Leyenda sobre la imagen: visible y legible gracias al overlay -->
-                                        <div class="image-caption">
-                                                <h3>Espacio de estudio y convivencia</h3>
-                                                <p>Estudiantes compartiendo en un área común rodeada de naturaleza.</p>
-                                        </div>
-                                </div>
-                        </section>
 
             <section class="content-section">
                 <!-- Sección informativa: ¿qué son las becas? -->
