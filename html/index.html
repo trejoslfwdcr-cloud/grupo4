@@ -1,61 +1,12 @@
-<!-- Archivo: html/index.html
-     Versión del archivo `index.html` con comentarios en cada línea explicando su función
-     y cómo aplicar el código en tu sitio. Mantén las explicaciones afuera del runtime
-     (son comentarios HTML) para no afectar la ejecución.
--->
-<!DOCTYPE html>
-<!-- Define el tipo de documento HTML5 para que el navegador renderice correctamente -->
-<html lang="es">
-<!-- Elemento raíz del documento; `lang` ayuda en accesibilidad y SEO -->
-<head>
-    <!-- Metadatos y recursos del documento -->
-    <meta charset="UTF-8">
-    <!-- Indica la codificación de caracteres; evita problemas con acentos y caracteres especiales -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Hace que el sitio sea responsive en móviles ajustando el ancho del viewport -->
-    <title>Becas Socioeconómicas 2026 - IBACS</title>
-    <!-- Texto que aparece en la pestaña del navegador; importante para identificación -->
-    <link rel="stylesheet" href="../css/styles.css">
-    <!-- Enlaza la hoja de estilos principal; sirve para separar estructura de presentación -->
-</head>
-<body>
-    <!-- Nota: el fondo de página (imagen + overlay) se aplica desde css/styles.css
-         usando `background-image: linear-gradient(...), url(...)` para añadir el overlay.
-         Esto mantiene el HTML limpio y permite ajustar el overlay desde CSS. -->
-    <!-- NAV BAR INTERACTIVO -->
-    <!-- Contenedor de navegación principal; sirve para moverse entre páginas del sitio -->
-    <nav class="navbar">
-        <!-- `navbar` contiene logo, menú y botón hamburguesa para móvil -->
-        <div class="nav-container">
-            <!-- Caja que alinea los elementos del navbar dentro de un ancho máximo -->
-            <div class="nav-logo">
-                <!-- Logo o nombre de la institución; importante para identidad visual -->
-                <h1>IBACS</h1>
-            </div>
-            <ul class="nav-menu">
-                <!-- Lista de enlaces de navegación; semánticamente correcta para accesibilidad -->
-                <li class="nav-item"><a href="index.html" class="nav-link active">Inicio</a></li>
-                <!-- Enlace a la página principal; la clase `active` indica la página actual -->
-                <li class="nav-item"><a href="registro.html" class="nav-link">Registro</a></li>
-                <!-- Enlace a la página de registro; dirige al formulario de inscripción -->
-                <li class="nav-item"><a href="iniciodesesion.html" class="nav-link">Iniciar Sesión</a></li>
-                <!-- Enlace para autenticación de usuarios -->
-                <li class="nav-item"><a href="usuario.html" class="nav-link">Perfil</a></li>
-                <!-- Enlace al perfil del usuario; útil para ver estado de la solicitud -->
-                <li class="nav-item"><a href="evaluador.html" class="nav-link">Evaluador</a></li>
-                <!-- Enlace para evaluadores (roles administrativos) -->
-            </ul>
-            <div class="hamburger">
-                <!-- Botón hamburguesa visible en móvil; controla la visibilidad del menú -->
-                <span></span>
-                <!-- Línea 1 del icono hamburguesa; estilizada por CSS -->
-                <span></span>
-                <!-- Línea 2 del icono hamburguesa -->
-                <span></span>
-                <!-- Línea 3 del icono hamburguesa -->
-            </div>
-        </div>
-    </nav>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Becas Socieconomicas 2026</title>
+    <link rel="stylesheet" href="../estilos-becas/index.css" />
+  </head>
+  <h1>Bienvenido a IBACS</h1>
 
     <!-- CONTENIDO PRINCIPAL -->
     <div class="container">
