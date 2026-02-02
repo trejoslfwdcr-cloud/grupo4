@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración</title>
+</head>
+<body>
+    <header>
+        <!--título-->
+        <h1>Administración</h1>
+        <!--botón de cerrar sesión-->
+        <nav>
+            <button id="cerrarsesión">Cerrar sesión</button>
+        </nav>
+    </header>
+
+    <!--contenido principal-->
+    <main>
+        <!--div para agregar criterios-->
+        <div id="criterios">
+            <h4>Criterios de evaluación</h4>
+            <div id="campoCriterios"> <!--los criterios deben aparecer aquí-->
+            
+            </div>
+            
+            <!--divs dónde se agregan los criterios-->
+            <div>
+                <input id="nuevosCriterios" type="text" placeholder="Digite nuevos criterios">
+                <button id="añadirCriterios">Añadir</button>
+            </div>
+        </div>
+
+        <!--div para determinar los tipos de becas-->
+        <div id="becas">
+            <h4>Becas</h4>
+            <div id="campoBecas"> <!--aquí deben de aparecer-->
+                
+            </div>
+
+            <!--div para la sección de añadir nuevos "tipos" de becas-->
+            <div>
+                <input id="becas" type="text" placeholder="Nueva beca">
+            </div>
+        </div>
+        
+        <!--div para asignar a los evaluadores-->
+        <div id="evaluadores">
+            <h4>Evaluadores</h4>
+            <div id="campoEvaluadores"> <!--aquí deben aparecer-->
+                
+            </div>
+
+            <div> <!--aquí se ingresan los datos para agregar a los evaluadores-->
+                <label for="">Agregue nuevo evaluador</label>
+                <input id="usuarioEvaluador" type="text" placeholder="Digite el usuario del evaluador">
+                <input id="contraseñaEvaluador" type="text" placeholder="Digite la contraseña del evaluador">
+                <button id="registrarEvaluador">Registrar Evaluador</button>
+            </div>
+        </div>
+    </main>
+
+    <!--footer-->
+    <footer>©2026. Todos los derechos reservados</footer>
+</body>
+</html>
